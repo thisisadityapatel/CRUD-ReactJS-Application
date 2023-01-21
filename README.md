@@ -1,3 +1,20 @@
+#Introduction:
+The Todo List Application is a simple and easy-to-use tool for managing your daily tasks. It allows you to create, edit, and organize your to-do items, set due-dates and mark tasks as complete.
+
+#Getting Started:
+Open the Todo List Application on your device. Create a new task by filling the "Input Task Form", and then click Add Button. Type in the task name and add any additional details or notes in the provided fields. Set a reminder and due date for the task, if desired. Click "Add" to add the task to your to-do list.
+
+#Managing Tasks:
+View your current tasks by clicking on the "Tasks" tab. Edit a task by clicking on the task name and making any desired changes. Mark a task as complete by clicking on the button at the bottom. Delete a task by clicking on the Delete button next to the task name.
+
+#Working on......!!
+Settin Task Alarms
+Fuzzy Search for Tasks!!
+Sorting, Filtering and other mamagement features
+
+#Conclusion:
+The Todo List Application is a powerful tool for managing your daily tasks and staying organized. It offers a variety of features, including task creation, editing, and organization, as well as reminders and due dates. With its easy-to-use interface and convenient shortcuts, the Todo List Application is the perfect tool to help you stay on top of your to-do list.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
