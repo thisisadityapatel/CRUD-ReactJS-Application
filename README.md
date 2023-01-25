@@ -8,9 +8,7 @@ Open the Todo List Application on your device. Create a new task by filling the 
 View your current tasks by clicking on the "Tasks" tab. Edit a task by clicking on the task name and making any desired changes. Mark a task as complete by clicking on the button at the bottom. Delete a task by clicking on the Delete button next to the task name.
 
 # Working on......!!
-Settin Task Alarms
-Fuzzy Search for Tasks!!
-Sorting, Filtering and other mamagement features
+Setting Task Alarms, Fuzzy Search for Tasks, Sorting, Filtering and other mamagement features : )
 
 # Conclusion:
 The Todo List Application is a powerful tool for managing your daily tasks and staying organized. It offers a variety of features, including task creation, editing, and organization, as well as reminders and due dates. With its easy-to-use interface and convenient shortcuts, the Todo List Application is the perfect tool to help you stay on top of your to-do list.
