@@ -7,6 +7,8 @@ import InputTask from './myComponents/InputTask';
 import { useState, useEffect} from 'react';
 import { createRoot } from "react-dom/client";
 import About from './myComponents/About';
+import FuzzySearch from 'fuzzy-search'; //fuzzy search algorithm
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -53,7 +55,7 @@ function App() {
     }), tempVar]);
   }
 
-  //functiont to delete the todo
+  //function to delete the todo
   const onDelete = (todo) => {
     console.log(todo);
     setTodos(todos.filter((e) => {
@@ -64,6 +66,23 @@ function App() {
   useEffect(()=>{
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos])
+
+  //Fuzzy search implementation
+  const searcher = new FuzzySearch(todos, ['title', 'desc', 'sno'], {
+    caseSensitive: true,
+  });
+
+  const fuzzSearch = (searchinput) => {
+    const outputArray = searcher.search(searchinput);
+    console.log(outputArray);
+
+    outputArray.forEach((todo) => {
+      console.log(todos.indexOf(todo));
+      setTodos([ todo , ...todos.filter((e) => {
+        return e !== todo;
+      })]);
+    })
+  }
 
   const router = createBrowserRouter([
     {
@@ -83,7 +102,7 @@ function App() {
 
   return (
     <>
-      <Header keepSearch={false} title="Task Manager"/>
+      <Header keepSearch={true} title="Task Manager" fuzzy={fuzzSearch}/>
       <RouterProvider router={router} />
       <Footer />
     </>

@@ -1,7 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types';
+import {useState} from 'react';
 
-function Header({title, keepSearch}) {
+function Header({title, keepSearch, fuzzy}) {
+    const [fusinput, setFusinput] = useState("");
+
+    const fuzzySearch = (e) => {
+        e.preventDefault();
+        fuzzy(fusinput);
+    }
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
@@ -18,8 +26,8 @@ function Header({title, keepSearch}) {
                     <a className="nav-link" href="./About">About</a>
                     </li>
                 </ul>
-                {keepSearch ? <form className="d-flex">
-                    <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                {keepSearch ? <form className="d-flex" onSubmit={fuzzySearch} >
+                    <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" onChange={(e) => { setFusinput(e.target.value) }}/>
                     <button className="btn btn-outline-success" type="submit">Search</button>
                 </form> : ""}
             </div>
